@@ -1,0 +1,26 @@
+function getString(item)
+{
+    return typeof item==='string'
+}
+function getnum(item)
+{
+    return typeof item==='number'
+}
+function getbool(item)
+{
+    return typeof item==='boolean'
+}
+
+function get(arr,fun1)
+{
+    var res=[]
+    for(let item of arr){
+        if(fun1(item)){
+            res.push(item)
+        }
+    }
+    return res
+}
+console.log(get(arr,getString))
+console.log(get(arr,getnum))
+console.log(get(arr,getbool))
