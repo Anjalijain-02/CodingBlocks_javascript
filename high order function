@@ -1,0 +1,28 @@
+functions => higher order function
+
+function apne argument me dusre function ko contain  kre 
+esa function jo function ko return krta h;
+
+function a(fn){
+    console.log("a") 
+    fn()
+}
+function b(){
+    console.log("b")
+}
+a(b)
+yha higher order a() hoga
+function a()
+{
+    console.log("a")
+    function b()
+    {
+        console.log("b")
+    }
+    return b
+}
+a()
+let b=a()
+console.log(b);
+b()
+a()() --> dono func call hojainge
